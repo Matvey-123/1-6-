@@ -6,26 +6,21 @@
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<title>1-8</title>
 	<script>
-		let surname = "<h1>Жмышенко</h1>";
-		let name = "<h1>Валерий</h1>";
-		let patronymic = "<h1>Альбертович</h1>";
-		let ocupation = "Ветеран";
-		let degree = "3 Всевышних";
-		let category = "Первая положительная";
-		let education = "Школа жизни 54";
-		let discipline = "Экомномика Lamoda";
-		let note = "Пожилой человек";	
+		let obj = {"surname":"<h1>Жмышенко</h1>","name":"<h1>Валерий</h1>","patronymic":"<h1>Альбертович</h1>","ocupation":"Ветеран","degree":"3 Всевышних","category":"Первая положительная","education":"Школа жизни 54","discipline":"Дрессированный","note":"Пожилой человек"};
 	</script>
 </head>
 <body>
 	<script type="text/javascript">
-		document.write(surname+" "+name+" "+patronymic+"<br>");
-		document.write("Должность: "+ocupation+"<br>");
-		document.write("Уровень образования: "+degree+"<br>");
-		document.write("Категория: "+category+"<br>");
-		document.write("Образование: "+education+"<br>");
-		document.write("Дисциплина: "+discipline+"<br>");
-		document.write("Примечание: "+note+"<br>");
+		let line =`
+			<h2>${obj.surname} ${obj.name} ${obj.patronymic}</h2>
+			<p><i>Должность:</i> ${obj.ocupation} </p>
+			<p><i>Уровень образования: </i>${obj.degree} </p>
+			<p><i>Категория:</i> ${obj.category} </p>
+			<p><i>Образование:</i> ${obj.education} </p>
+			<p><i>Дисциплина:</i> ${obj.discipline} </p>
+			<p><i>Примечание:</i> ${obj.note} </p>
+		`;
+		document.write(line);
 	</script>
 </body>
 </html>
