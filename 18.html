@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<title>1-8</title>
 	<script>
-		let obj = {"surname":"<h1>Жмышенко</h1>","name":"<h1>Валерий</h1>","patronymic":"<h1>Альбертович</h1>","ocupation":"Ветеран","degree":"3 Всевышних","category":"Первая положительная","education":"Школа жизни 54","discipline":"Дрессированный","note":"Пожилой человек"};
+		let obj = {"surname":"<h1>Жмышенко</h1>","name":"<h1>Валерий</h1>","patronymic":"<h1>Альбертович</h1>","ocupation":["Ветеран", " Тракторист"],"degree":"3 Всевышних","category":"Первая положительная","education":["Школа жизни 54"," Самарский моторо-тракторный колледж"],"discipline":"Дрессированный","note":"Пожилой человек"};
 	</script>
 </head>
 <body>
@@ -16,7 +16,7 @@
 			<p><i>Должность:</i> ${obj.ocupation} </p>
 			<p><i>Уровень образования: </i>${obj.degree} </p>
 			<p><i>Категория:</i> ${obj.category} </p>
-			<p><i>Образование:</i> ${obj.education} </p>
+			<p><i>Образование:</i><ul><li>${obj.education[0]}</li><li>${obj.education[1]}</li></ul></p>
 			<p><i>Дисциплина:</i> ${obj.discipline} </p>
 			<p><i>Примечание:</i> ${obj.note} </p>
 		`;
